@@ -24,15 +24,18 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "franc": "^4.0.0",
     "googleapis": "^36.0.0",
     "jquery": "^3.3.1",
     "jsonfile": "^5.0.0",
+    "moment": "^2.23.0",
     "mongoose": "^5.2.10",
     "morgan": "^1.9.0",
     "opn": "^5.4.0",
     "popper.js": "^1.14.4",
     "pug": "^2.0.3",
     "serve-favicon": "^2.5.0",
+    "shortid": "^2.2.14",
     "url": "^0.11.0"
   }
 }

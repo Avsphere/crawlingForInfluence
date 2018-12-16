@@ -3,6 +3,7 @@ process.env.NODE_ENV = process.env.NODE_ENV ? process.env.NODE_ENV : 'dev'
 const mongoose = require('mongoose')
 const config = require('config')
 const MetaVideo = require('../models/metaVideo')
+const LiveData = require('../models/liveData')
 
 mongoose.connect(config.db.connectionString, { useNewUrlParser : true }).then(
   () => { console.log("Connected to database!"); clearDb() },
@@ -31,6 +32,8 @@ const clearDb = async() => {
   console.log("Clearing Db")
   await clearCollection(MetaVideo)
   await dropIndexes(MetaVideo)
+  await clearCollection(LiveData)
+  await dropIndexes(LiveData)
   console.log("Db cleared")
   process.exit(0);
 

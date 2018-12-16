@@ -4,9 +4,12 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 const metaVideoSchema = mongoose.Schema({
   etag : { type : String },
   kind : { type : String },
-  id : { type : String },
+  id : { type : String }, //videoId
   processed : { type : Boolean, default : false },
-  liveData : { type : ObjectId },
+  sitting : { type : Boolean, default : false },
+  prime : { type : Boolean, default : false }, //where a prime chatroom is one that has a good flow of messages
+  language: { type : String },
+  liveData : [{ type : ObjectId, ref: 'LiveData' }],
   snippet : {
     publishedAt : { type : Date },
     channelId : { type : String },
